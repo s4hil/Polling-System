@@ -1,0 +1,29 @@
+
+img[alt="www.000webhost.com"]{
+    display: none !important;
+}
+
+.bar-container {
+    margin-top: 30px;
+}
+
+.bar-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main-head button {
+	float: right;
+}
+
+@media only screen and (max-width: 768px){
+    
+    h1, h3 {
+    	font-size: 1.5rem;
+    }
+    .stats {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

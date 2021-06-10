@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Polling System</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<link rel="icon" href="assets/imgs/favicon.png">
+
+
+	<style>
+		img[alt="www.000webhost.com"]{
+		    display: none !important;
+		}
+	</style>
+</head>
+<body>
+	<main class="wrapper">
+		<div class="container pt-5">
+			<h1 class="alert alert-secondary text-center main-head">
+				Online Poll - 2021 <button class="btn btn-success" id="loginBtn">Admin</button>
+			</h1>
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6">
+					<h3 class="alert alert-info text-center">Submission Form</h3>
+					<form class="form" id="main-form">
+						<fieldset class="form-group">
+							<label>Name</label>
+							<input name="name" type="text" id="name" class="form-control" placeholder="Enter You Name">
+						</fieldset>
+						<fieldset class="form-group">
+							<label>Select Candidate</label>
+							<select name="candidate" id="SelectedCandidate" class="form-control">
+								<optgroup id="options"></optgroup>
+							</select>
+						</fieldset>
+						<fieldset class="form-group">
+							<button class="btn btn-success" id="addVote">Submit</button>
+						</fieldset>
+					</form>
+					<div id="msg"></div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6 stats">
+					<h3 class="alert alert-success text-center">Live Stats</h3>
+					<div id="stats"></div>
+				</div>
+			</div>
+		</div>
+		<div class="copyrights text-center mt-5 mb-2">
+			Created with &#10084; by <a href="https://sahilparray.tech">Sahil Parray</a>
+		</div>
+	</main>
+
+
+	<!-- Begin Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form class="form" autocomplete="off">
+	        	<fieldset class="form-group">
+	        		<label>Userneme</label>
+	        		<input type="text" id="username" required class="form-control">
+	        	</fieldset>
+	        	<fieldset class="form-group">
+	        		<label>Password</label>
+	        		<input type="password" id="password" required class="form-control">
+	        	</fieldset>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" id="close-login-modal">Close</button>
+	        <button type="button" class="btn btn-primary" id="login">Login</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- End Login Modal -->
+
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

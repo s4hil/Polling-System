@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Polling System</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="icon" href="assets/imgs/favicon.png">
+
+
+	<style>
+		img[alt="www.000webhost.com"]{
+		    display: none !important;
+		}
+		form, table {
+			border: 1px solid #f1f1f1;
+			padding: 7px;
+		}
+	</style>
+</head>
+<body>
+	<main class="wrapper pt-5 contai">
+		<div class="container">
+			<h1 class="alert alert-info text-center">
+				Poll Sys - Admin 
+				<button class="btn btn-secondary" id="logout" style="float: right;">Logout</button>
+			</h1>
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-4">
+					<h4 class="alert alert-success">Add Candidate</h4>
+					<form class="form">
+						<fieldset class="form-group">
+							<label>Name</label>
+							<input type="text" name="candidate" class="form-control" id="cName">
+						</fieldset>
+						<fieldset class="form-group">
+							<button class="btn btn-success" id="add">Add</button>
+						</fieldset>
+						<div id="msg"></div>
+					</form>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-8">
+					<h4 class="alert alert-secondary">Candidate List</h4>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<td>S.no</td>
+								<td>Name</td>
+								<td>Action</td>
+							</tr>
+						</thead>
+						<tbody id="table-body"><!-- Will be populated by JS --></tbody>
+					</table>
+				</div> 
+			</div>
+		</div>
+	</main>
+
+	<!-- BEGIN Delete Modal -->
+	<div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <input type="text" id="del-id" hidden>Are you sure?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" id="close-delete-modal">Cancel</button>
+	        <button type="button" class="btn btn-danger" id="dlt-confirm">Yes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- END DELETE MODAL -->
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/admin.js"></script>
+
+</body>
+</html>
